@@ -6,7 +6,7 @@ import java.util.List;
 /**
   Filter Employee  Details Collections using Java Stream API
  */
-public class Empstream
+public class EmpStream
 {
     public static void main( String[] args )
     {
