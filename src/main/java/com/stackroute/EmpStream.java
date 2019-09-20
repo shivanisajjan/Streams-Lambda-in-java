@@ -170,8 +170,23 @@ public class EmpStream
         /*****************************************************
          Conditionally apply Filter condition, say if flag is enabled then using stream
          *****************************************************/
-
-
+        System.out.println("Conditionally applying Filter condition, say if flag is enabled then using stream:");
+        System.out.println("---------------------------------------------------------------------------------");
+        Boolean flag=true;
+        List<Employee> getname=new ArrayList<>();
+        if(!flag){
+            for(Employee e:li){
+                if(e.getName().equals("Javesh")){
+                    getname.add(e);
+                }
+            }
+        }
+        else {
+            getname = li.stream().filter(str->str.getName().equals("Jayesh")).collect(Collectors.toList());
+        }
+        for (Employee emp:getname){
+            System.out.println(emp.toString());
+        }
 
 
     }
